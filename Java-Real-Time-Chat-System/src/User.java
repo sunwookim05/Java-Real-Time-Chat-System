@@ -1,7 +1,9 @@
 import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class User {
     private ArrayList<User> usersList;
@@ -31,7 +33,7 @@ public class User {
     }
 
     public void BroadCast(String msg){
-        Integer <User> iter = usersList.iterator();
+        Iterator<User> iter = usersList.iterator();
         while(iter.hasNext()){
             User temp = iter.next();
             if (temp.equals(this)) continue;
